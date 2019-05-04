@@ -76,20 +76,18 @@ const Social = styled.ul`
   }
 `;
 
-const IndexWrapper = Wrapper.withComponent("main");
-
-class Index extends Component {
+class About extends Component {
   render() {
     const {
-      data: { homepage, social, posts }
+      data: { page, social }
     } = this.props;
     return (
       <Layout>
         <Hero>
           <HeroInner>
-            <h1>{homepage.data.title.text}</h1>
+            <h1>{page.data.title.text}</h1>
             <HeroText
-              dangerouslySetInnerHTML={{ __html: homepage.data.content.html }}
+              dangerouslySetInnerHTML={{ __html: page.data.body.html }}
             />
             <Social>
               {social.edges.map((s, index) => (
@@ -105,34 +103,27 @@ class Index extends Component {
             </Social>
           </HeroInner>
         </Hero>
-        <IndexWrapper
-          id={website.skipNavId}
-          style={{ paddingTop: "2rem", paddingBottom: "2rem" }}
-        >
-          <Title style={{ marginTop: "4rem" }}>Recent posts</Title>
-          <Listing posts={posts.edges} />
-        </IndexWrapper>
       </Layout>
     );
   }
 }
 
-export default Index;
+export default About;
 
-Index.propTypes = {
+About.propTypes = {
   data: PropTypes.shape({
     posts: PropTypes.object.isRequired
   }).isRequired
 };
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    homepage: prismicHomepage {
+  query AboutQuery {
+    page: prismicAboutPage {
       data {
         title {
           text
         }
-        content {
+        body {
           html
         }
       }
@@ -146,28 +137,6 @@ export const pageQuery = graphql`
             }
             link {
               url
-            }
-          }
-        }
-      }
-    }
-    posts: allPrismicPost(sort: { fields: [data___date], order: DESC }) {
-      edges {
-        node {
-          uid
-          data {
-            title {
-              text
-            }
-            date(formatString: "DD.MM.YYYY")
-            categories {
-              category {
-                document {
-                  data {
-                    name
-                  }
-                }
-              }
             }
           }
         }
