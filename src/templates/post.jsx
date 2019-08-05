@@ -101,47 +101,11 @@ export const pageQuery = graphql`
           }
         }
         body {
-          ... on PrismicPostBodyText {
-            slice_type
-            id
-            primary {
-              text {
-                html
-              }
-            }
-          }
-          ... on PrismicPostBodyCodeBlock {
-            slice_type
-            id
-            primary {
-              code_block {
-                html
-              }
-            }
-          }
-          ... on PrismicPostBodyQuote {
-            slice_type
-            id
-            primary {
-              quote {
-                html
-                text
-              }
-            }
-          }
-          ... on PrismicPostBodyImage {
-            slice_type
-            id
-            primary {
-              image {
-                localFile {
-                  childImageSharp {
-                    fluid(maxWidth: 1200, quality: 90) {
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
-                  }
-                }
-              }
+          slice_type
+          id
+          primary {
+            text {
+              html
             }
           }
         }
