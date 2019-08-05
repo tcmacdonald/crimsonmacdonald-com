@@ -32,6 +32,10 @@ const Headline = styled.p`
   }
 `;
 
+const Main = styled.main`
+  margin-top: 2em;
+`;
+
 const PostWrapper = Wrapper.withComponent("main");
 
 const Post = ({ data: { prismicPost, posts }, location }) => {
@@ -59,7 +63,7 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
         </Wrapper>
       </Hero>
       <PostWrapper id={website.skipNavId}>
-        <SliceZone allSlices={data.body} />
+        <Main dangerouslySetInnerHTML={{ __html: data.body.html }} />
         <Title style={{ marginTop: "4rem" }}>Recent posts</Title>
         <Listing posts={posts.edges} />
       </PostWrapper>
@@ -101,13 +105,7 @@ export const pageQuery = graphql`
           }
         }
         body {
-          slice_type
-          id
-          primary {
-            text {
-              html
-            }
-          }
+          html
         }
       }
     }
