@@ -6,6 +6,9 @@ const StyledFooter = styled.footer`
   max-width: ${props => props.theme.maxWidth};
   margin: 6rem auto 0 auto;
   padding: 0 0 2rem 0;
+  @media (max-width: ${props => props.theme.breakpoints.m}) {
+    padding: 0 2rem 1rem 2rem;
+  }
   color: ${props => props.theme.colors.grey};
 `;
 

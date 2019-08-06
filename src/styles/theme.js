@@ -16,7 +16,13 @@ const theme = {
     s: '600px',
     m: '900px',
     l: '1200px',
+    min: {
+      xs: '399px',
+      s: '599px',
+      m: '899px',
+      l: '1199px',
+    },
   },
-}
+};
 
-export default theme
+export default theme;

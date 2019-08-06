@@ -18,6 +18,7 @@ const HeroText = styled.div`
   margin-bottom: 2rem;
   @media (max-width: ${props => props.theme.breakpoints.m}) {
     font-size: 1.4rem;
+    margin-bottom: 6rem;
   }
   @media (max-width: ${props => props.theme.breakpoints.s}) {
     font-size: 1.25rem;
@@ -47,13 +48,21 @@ const ImageWrapper = styled.div`
 `;
 
 const Left = styled.div`
-  width: 250px;
-  float: left;
+  @media (max-width: ${props => props.theme.breakpoints.m}) {
+    margin-top: 2rem;
+    margin-right: 2rem;
+  }
+  @media (min-width: ${props => props.theme.breakpoints.min.l}) {
+    float: left;
+    width: 250px;
+  }
 `;
 
 const Right = styled.div`
-  width: 750px;
-  float: left;
+  @media (min-width: ${props => props.theme.breakpoints.min.l}) {
+    float: left;
+    width: 750px;
+  }
 `;
 
 const IndexWrapper = Wrapper.withComponent('main');
