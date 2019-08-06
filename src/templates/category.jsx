@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import styled from '@emotion/styled'
-import { Layout, Listing, Wrapper, Title, SEO, Header } from '../components'
-import website from '../../config/website'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import styled from '@emotion/styled';
+import { Layout, Listing, Wrapper, Title, SEO } from '../components';
+import website from '../../config/website';
 
 const Hero = styled.header`
   background-color: ${props => props.theme.colors.primary};
@@ -12,20 +12,21 @@ const Hero = styled.header`
   h1 {
     color: ${props => props.theme.colors.bg};
   }
-`
+`;
 
 const Headline = styled.p`
-  font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial',
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont',
+    'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
   color: ${props => props.theme.colors.greyBlue};
   font-size: 1.25rem;
   a {
     font-style: normal;
     font-weight: normal;
   }
-`
+`;
 
-const CatWrapper = Wrapper.withComponent('main')
+const CatWrapper = Wrapper.withComponent('main');
 
 const Category = ({
   pageContext: { category },
@@ -35,24 +36,27 @@ const Category = ({
   location,
 }) => (
   <Layout>
-    <SEO title={`Category: ${category} | ${website.titleAlt}`} pathname={location.pathname} />
+    <SEO
+      title={`Category: ${category} | ${website.titleAlt}`}
+      pathname={location.pathname}
+    />
     <Hero>
       <Wrapper>
-        <Header invert />
         <Headline>Category</Headline>
         <h1>{category}</h1>
       </Wrapper>
     </Hero>
     <CatWrapper id={website.skipNavId}>
       <Title style={{ marginTop: '4rem' }}>
-        {totalCount} {totalCount === 1 ? 'Post' : 'Posts'} {totalCount === 1 ? 'was' : 'were'} tagged with "{category}"
+        {totalCount} {totalCount === 1 ? 'Post' : 'Posts'}{' '}
+        {totalCount === 1 ? 'was' : 'were'} tagged with "{category}"
       </Title>
       <Listing posts={edges} />
     </CatWrapper>
   </Layout>
-)
+);
 
-export default Category
+export default Category;
 
 Category.propTypes = {
   pageContext: PropTypes.shape({
@@ -65,7 +69,7 @@ Category.propTypes = {
     }).isRequired,
   }).isRequired,
   location: PropTypes.object.isRequired,
-}
+};
 
 export const pageQuery = graphql`
   query CategoryPage($category: String!) {
@@ -73,7 +77,13 @@ export const pageQuery = graphql`
       sort: { fields: [data___date], order: DESC }
       filter: {
         data: {
-          categories: { elemMatch: { category: { document: { elemMatch: { data: { name: { eq: $category } } } } } } }
+          categories: {
+            elemMatch: {
+              category: {
+                document: { elemMatch: { data: { name: { eq: $category } } } }
+              }
+            }
+          }
         }
       }
     ) {
@@ -100,4 +110,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

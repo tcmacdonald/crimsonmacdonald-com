@@ -1,18 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import styled from "@emotion/styled";
-import {
-  Layout,
-  Listing,
-  Wrapper,
-  SliceZone,
-  Title,
-  SEO,
-  Header
-} from "../components";
-import Categories from "../components/Listing/Categories";
-import website from "../../config/website";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import styled from '@emotion/styled';
+import { Layout, Listing, Wrapper, Title, SEO } from '../components';
+import Categories from '../components/Listing/Categories';
+import website from '../../config/website';
 
 const Hero = styled.header`
   background-color: ${props => props.theme.colors.greyLight};
@@ -21,9 +13,9 @@ const Hero = styled.header`
 `;
 
 const Headline = styled.p`
-  font-family: "Source Sans Pro", -apple-system, "BlinkMacSystemFont",
-    "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont',
+    'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
   color: ${props => props.theme.colors.grey};
   font-size: 1.25rem;
   a {
@@ -34,9 +26,14 @@ const Headline = styled.p`
 
 const Main = styled.main`
   margin-top: 2em;
+  font-size: 120%;
+  line-height: 1.8;
+  @media (min-width: ${props => props.theme.breakpoints.m}) {
+    width: 70%;
+  }
 `;
 
-const PostWrapper = Wrapper.withComponent("main");
+const PostWrapper = Wrapper.withComponent('main');
 
 const Post = ({ data: { prismicPost, posts }, location }) => {
   const { data } = prismicPost;
@@ -55,7 +52,6 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
       />
       <Hero>
         <Wrapper>
-          <Header />
           <Headline>
             {data.date} — {categories && <Categories categories={categories} />}
           </Headline>
@@ -64,7 +60,7 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
       </Hero>
       <PostWrapper id={website.skipNavId}>
         <Main dangerouslySetInnerHTML={{ __html: data.body.html }} />
-        <Title style={{ marginTop: "4rem" }}>Recent posts</Title>
+        <Title style={{ marginTop: '4rem' }}>Recent posts</Title>
         <Listing posts={posts.edges} />
       </PostWrapper>
     </Layout>
@@ -75,9 +71,9 @@ export default Post;
 
 Post.propTypes = {
   data: PropTypes.shape({
-    prismicPost: PropTypes.object.isRequired
+    prismicPost: PropTypes.object.isRequired,
   }).isRequired,
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
 };
 
 // The typenames come from the slice names
