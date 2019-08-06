@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { Link } from "gatsby";
-import { css, jsx } from "@emotion/core";
-import styled from "@emotion/styled";
-import { FiHome, FiTwitter } from "react-icons/fi";
-import MomsLogo from "../assets/svgs/moms.svg";
+import React, { Component } from 'react';
+import { Link } from 'gatsby';
+import { css, jsx } from '@emotion/core';
+import styled from '@emotion/styled';
+import { FiHome, FiTwitter } from 'react-icons/fi';
+import MomsLogo from '../assets/svgs/moms.svg';
 
 const InlineList = styled.ul`
   background: #666;
@@ -11,7 +11,7 @@ const InlineList = styled.ul`
   margin: 0;
   padding: 0.4em 0.65em 0;
   &:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
@@ -55,7 +55,7 @@ export default class Nav extends Component {
               <FiTwitter />
             </a>
           </li>
-          <li
+          {/* <li
             css={css`
               float: right;
             `}
@@ -63,7 +63,7 @@ export default class Nav extends Component {
             <a href="#">
               <MomsLogo />
             </a>
-          </li>
+          </li> */}
         </InlineList>
       </nav>
     );
