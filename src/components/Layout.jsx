@@ -49,6 +49,9 @@ const globalStyle = css`
     html {
       font-size: 16px !important;
     }
+    h1 {
+      margin-top: 2rem;
+    }
   }
   @media (max-width: ${theme.breakpoints.s}) {
     h1 {
