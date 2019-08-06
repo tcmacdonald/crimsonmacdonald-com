@@ -12,8 +12,8 @@ const Hero = styled.header`
 `;
 
 const HeroInner = styled(Wrapper)`
-  padding-top: 13rem;
-  padding-bottom: 13rem;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
   h1 {
     margin-bottom: 2rem;
   }
@@ -107,7 +107,7 @@ class Index extends Component {
         </Hero>
         <IndexWrapper
           id={website.skipNavId}
-          style={{ paddingTop: "2rem", paddingBottom: "2rem" }}
+          style={{ paddingTop: "1rem", paddingBottom: "2rem" }}
         >
           <Title style={{ marginTop: "4rem" }}>Recent posts</Title>
           <Listing posts={posts.edges} />
