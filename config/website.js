@@ -6,7 +6,7 @@ module.exports = {
   headline: 'Biography and thoughts of Crimson MacDonald', // Headline for schema.org JSONLD
   url: 'https://crimsonmac.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  logo: '/logos/logo-1024.png', // Used for SEO
+  logo: '/images/crimson.jpg', // Used for SEO
   ogLanguage: 'en_US', // Facebook Language
 
   // JSONLD / Manifest
@@ -21,4 +21,4 @@ module.exports = {
   googleAnalyticsID: 'UA-47519312-7',
 
   skipNavId: 'reach-skip-nav', // ID for the "Skip to content" a11y feature
-}
+};
