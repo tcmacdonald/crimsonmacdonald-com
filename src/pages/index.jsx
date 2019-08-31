@@ -31,20 +31,10 @@ const HeroWrapper = styled(Wrapper)`
 `;
 
 const ImageWrapper = styled.div`
-  width: 200px;
-  min-width: 200px;
-  height: 200px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
+  width: 180px;
+  height: 260px;
   border: solid 0.5rem #fff;
-  .tn {
-    display: inline;
-    margin: 0 auto;
-    margin-left: -25%; //centers the image
-    height: 100%;
-    width: auto;
-  }
+  overflow: hidden;
 `;
 
 const Left = styled.div`
@@ -113,7 +103,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     thumbnail: file(relativePath: { eq: "crimson.jpg" }) {
       childImageSharp {
-        fixed(width: 230, height: 230) {
+        fixed(width: 180) {
           ...GatsbyImageSharpFixed
         }
       }
