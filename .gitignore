@@ -60,6 +60,7 @@ public/
 bundle-stats.json
 
 .env
+.envrc
 .env.development
 .env.production
 
