@@ -1,5 +1,11 @@
 ---
-
+import { Image } from 'astro:assets';
+import Headshot from '../assets/images/crimson.jpg';
+import Logo from '../assets/svgs/cmac.svg?raw';
+import KCET from '../assets/svgs/kcet.svg?raw';
+import KDA from '../assets/svgs/kda.svg?raw';
+import Moms from '../assets/svgs/moms.svg?raw';
+import Rebuilding from '../assets/svgs/rebuilding.svg?raw';
 ---
 
 <html lang="en">
@@ -9,8 +15,241 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/881b32c900.js"
+			crossorigin="anonymous"
+		>
+		</script>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-white dark:bg-slate-800">
+		<header class="bg-gray-100 dark:bg-gray-900">
+			<nav
+				class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+				aria-label="Global"
+			>
+				<div class="flex flex-1">
+					<a
+						href="#"
+						class="-m-1.5 p-1.5 logo text-gray-300 hover:text-gray-600 dark:text-white dark:hover:text-yellow-100 hover:scale-110 transition-all"
+					>
+						<span class="sr-only">Crimson MacDonald</span>
+						<Fragment
+							class="h-8 w-100 w-auto"
+							style="width: 100px;"
+							set:html={Logo}
+						/>
+					</a>
+				</div>
+
+				<div class="flex flex-1 justify-end gap-10">
+					<a
+						href=""
+						class="text-gray-300 hover:text-gray-600 dark:text-yellow-100 dark:hover:text-yellow-500 hover:scale-110 transition-all"
+					>
+						<i class="text-4xl fa-brands fa-linkedin"></i>
+					</a>
+					<a
+						href=""
+						class="text-gray-300 hover:text-gray-600 dark:text-yellow-100 dark:hover:text-yellow-500 hover:scale-110 transition-all"
+					>
+						<i class="text-4xl fa-solid fa-envelope"></i>
+					</a>
+					<a
+						href=""
+						class="text-gray-300 hover:text-gray-600 dark:text-yellow-100 dark:hover:text-yellow-500 hover:scale-110 transition-all"
+					>
+						<i class="text-4xl fa-solid fa-phone"></i>
+					</a>
+				</div>
+			</nav>
+		</header>
+
+		<main
+			class="mx-auto max-w-7xl p-8 lg:py-24 text-gray-700 dark:text-yellow-100"
+		>
+			<div class="lg:flex lg:flex-1 gap-10">
+				<div
+					class="w-300 mb-10 hover:scale-110 hover:rotate-2 transition-all"
+				>
+					<Image
+						src={Headshot}
+						alt="Colonel Crimson R. MacDonald"
+						class="inline-block rounded-full border-8 border-gray-300 dark:border-white"
+					/>
+				</div>
+				<div class="text-left">
+					<h2
+						class="text-3xl font-bold tracking-tight sm:text-6xl dark:text-yellow-200 drop-shadow-xl"
+					>
+						Not your traditional consultant
+					</h2>
+					<p class="mt-6 mb-10 text-lg leading-8 dark:text-white">
+						My life's work has been diverse. For nearly 20 years, I
+						have predicted human behavior through deductive
+						analysis. I was trained in Political Science at the
+						University of Kentucky. I hold an MA in Econometrics. I
+						am the former chair of the Democratic Party and a
+						certified Kentucky Colonel. I like to use data to help
+						consumers and voters make more informed decisions.
+					</p>
+					<form class="w-full max-w-md lg:col-span-5 lg:pt-2">
+						<div class="flex gap-x-4">
+							<label for="email-address" class="sr-only">
+								Email address
+							</label>
+							<input
+								id="email-address"
+								name="email"
+								type="email"
+								autocomplete="email"
+								required
+								class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+								placeholder="Enter your email"
+							/>
+							<button
+								type="submit"
+								class="flex-none rounded-md bg-indigo-600 dark:bg-yellow-200 px-3.5 py-2.5 text-sm font-semibold text-white dark:text-gray-800 shadow-sm hover:bg-indigo-500 dark:hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+							>
+								Subscribe
+							</button>
+						</div>
+						<p
+							class="mt-4 text-sm leading-6 text-gray-900 dark:text-gray-300"
+						>
+							We care about your data. Read our <a
+								href="#"
+								class="font-semibold text-indigo-600 dark:text-yellow-200 hover:text-indigo-500 dark:hover:text-yellow-500"
+							>
+								privacy&nbsp;policy
+							</a>.
+						</p>
+					</form>
+				</div>
+			</div>
+			<div class="flex gap-20 mt-20 items-center">
+				<div class="text-center w-1/4">
+					<a
+						href="#"
+						class="inline-block dark:text-white dark:hover:text-yellow-100 hover:scale-110 transition-all"
+						style="width: 190px"
+					>
+						<Fragment class="h-12" set:html={KCET} />
+					</a>
+				</div>
+
+				<div class="text-center w-1/4">
+					<a
+						href="#"
+						class="inline-block dark:text-white dark:hover:text-yellow-100 hover:scale-110 transition-all"
+						style="width: 230px"
+					>
+						<Fragment class="h-12" set:html={KDA} />
+					</a>
+				</div>
+
+				<div class="text-center w-1/4">
+					<a
+						href="#"
+						class="inline-block dark:text-white dark:hover:text-yellow-100 hover:scale-110 transition-all"
+						style="width: 180px"
+					>
+						<Fragment class="h-12" set:html={Moms} />
+					</a>
+				</div>
+
+				<div class="text-center w-1/4">
+					<a
+						href="#"
+						class="inline-block dark:text-white dark:hover:text-yellow-100 hover:scale-110 transition-all"
+						style="width: 180px"
+					>
+						<Fragment class="h-12" set:html={Rebuilding} />
+					</a>
+				</div>
+			</div>
+		</main>
+		<hr />
+		<footer>
+			<div class="bg-gray-100 dark:bg-gray-900 py-16 sm:py-24 lg:py-32">
+				<div
+					class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8"
+				>
+					<div
+						class="max-w-xl text-3xl font-bold tracking-tight dark:text-white sm:text-4xl lg:col-span-7"
+					>
+						<h2 class="inline sm:block lg:inline xl:block">
+							Want product news and updates?
+						</h2>
+						<p class="inline sm:block lg:inline xl:block">
+							Sign up for our newsletter.
+						</p>
+					</div>
+
+					<form class="w-full max-w-md lg:col-span-5 lg:pt-2">
+						<div class="flex gap-x-4">
+							<label for="email-address" class="sr-only">
+								Email address
+							</label>
+							<input
+								id="email-address"
+								name="email"
+								type="email"
+								autocomplete="email"
+								required
+								class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+								placeholder="Enter your email"
+							/>
+							<button
+								type="submit"
+								class="flex-none rounded-md bg-indigo-600 dark:bg-yellow-200 px-3.5 py-2.5 text-sm font-semibold text-white dark:text-gray-800 shadow-sm hover:bg-indigo-500 dark:hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+							>
+								Subscribe
+							</button>
+						</div>
+						<p
+							class="mt-4 text-sm leading-6 text-gray-900 dark:text-gray-300"
+						>
+							We care about your data. Read our <a
+								href="#"
+								class="font-semibold text-indigo-600 dark:text-yellow-200 hover:text-indigo-500 dark:hover:text-yellow-500"
+							>
+								privacy&nbsp;policy
+							</a>.
+						</p>
+					</form>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
+
+<style type="scss">
+	a.block {
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		span {
+			display: inline-block;
+			svg {
+				position: relative;
+				z-index: -1;
+			}
+		}
+	}
+	.logo {
+		width: 200px;
+	}
+	.logo > svg {
+		fill: red;
+	}
+</style>
