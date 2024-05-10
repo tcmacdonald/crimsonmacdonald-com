@@ -1,0 +1,48 @@
+---
+import KCET from '../assets/svgs/kcet.svg?raw';
+import KDA from '../assets/svgs/kda.svg?raw';
+import Moms from '../assets/svgs/moms.svg?raw';
+import Rebuilding from '../assets/svgs/rebuilding.svg?raw';
+---
+
+<section id="logos" class="flex flex-row text-center gap-20 mt-16 items-center">
+	<div class="text-center md:w-1/4">
+		<a
+			href="https://kykcet.org/"
+			class="inline-block hover:text-sky-700 dark:text-white dark:hover:text-yellow-100 hover:scale-110 transition-all dark:drop-shadow-xl"
+			style="width: 190px"
+		>
+			<Fragment class="h-12" set:html={KCET} />
+		</a>
+	</div>
+
+	<div class="text-center md:w-1/4">
+		<a
+			href="https://kydemauxiliary.com/"
+			class="inline-block hover:text-sky-700 dark:text-white dark:hover:text-yellow-100 hover:scale-110 transition-all dark:drop-shadow-xl"
+			style="width: 230px"
+		>
+			<Fragment class="h-12" set:html={KDA} />
+		</a>
+	</div>
+
+	<div class="text-center md:w-1/4">
+		<a
+			href="https://momsdemandaction.org/"
+			class="inline-block hover:text-sky-700 dark:text-white dark:hover:text-yellow-100 hover:scale-110 transition-all drop-shadow-xl"
+			style="width: 180px"
+		>
+			<Fragment class="h-12" set:html={Moms} />
+		</a>
+	</div>
+
+	<div class="text-center md:w-1/4">
+		<a
+			href="https://www.rebuildingpod.com/"
+			class="inline-block hover:text-sky-700 dark:text-white dark:hover:text-yellow-100 hover:scale-110 transition-all drop-shadow-xl"
+			style="width: 180px"
+		>
+			<Fragment class="h-12" set:html={Rebuilding} />
+		</a>
+	</div>
+</section>
