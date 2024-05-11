@@ -5,31 +5,117 @@ import Form from '../components/Form.astro';
 import Logos from '../components/Logos.astro';
 import Headshot from '../assets/images/crimson.jpg';
 import Services from '../components/Services.astro';
+import Section from '../components/Section.astro';
 ---
 
 <Layout>
-	<section id="jumbotron" class="md:flex md:flex-1 gap-10">
-		<div class="hover:scale-110 hover:rotate-2 transition-all md:order-last mb-8 text-center">
-			<Image
-				src={Headshot}
-				alt="Colonel Crimson R. MacDonald"
-				class="inline-block rounded-full border-8 border-gray-300 dark:border-white max-w-60"
-			/>
+	<Section>
+		<div class="md:flex md:flex-1 gap-8">
+			<div class="hover:scale-110 hover:rotate-2 transition-all md:order-last text-center mb-8">
+				<Image
+					src={Headshot}
+					alt="Colonel Crimson R. MacDonald"
+					class="inline-block rounded-full border-8 border-gray-300 dark:border-white max-w-60 lg:max-w-80"
+				/>
+			</div>
+			<div class="text-center md:text-left">
+				<h2 class="text-3xl font-bold tracking-tight sm:text-6xl dark:text-yellow-200 dark:drop-shadow-xl">
+					Not your traditional consultant.
+				</h2>
+				<p class="mt-6 mb-16 text-lg leading-8 dark:text-white">
+					I studied Political Science at the University of Kentucky. The goal of my studies was to understand
+					human behavior and how to predict it through data and analytics. For over 20 years, I have predicted
+					human behavior through deductive analysis. From marketing to political campaigns, I've helped brands
+					make more informed decisions. Understanding human behavior is the key in persuading voters and
+					consumers alike.
+				</p>
+				<Form />
+			</div>
 		</div>
-		<div class="text-left">
-			<h2 class="text-3xl font-bold tracking-tight sm:text-6xl dark:text-yellow-200 dark:drop-shadow-xl">
-				Not your traditional consultant
-			</h2>
-			<p class="mt-6 mb-10 text-lg leading-8 dark:text-white">
-				I studied Political Science at the University of Kentucky. The goal of my studies was to understand
-				human behavior and how to predict it through data and analytics. For over 20 years, I have predicted
-				human behavior through deductive analysis. From marketing to political campaigns, I've helped brands
-				make more informed decisions. Understanding human behavior is the key in persuading voters and consumers
-				alike.
-			</p>
-			<Form />
-		</div>
-	</section>
+	</Section>
+
 	<Services />
+
+	<Section title="Education + Work History">
+		<div class="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:max-w-none lg:grid-cols-4 mt-8 mb-24">
+			<div>
+				<time datetime="2021-08" class="flex items-center text-sm font-semibold leading-6 text-sky-600">
+					<svg viewBox="0 0 4 4" class="mr-4 h-1 w-1 flex-none" aria-hidden="true">
+						<circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+					</svg>
+					2005
+					<div
+						class="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 dark:bg-gray-100/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+						aria-hidden="true"
+					>
+					</div>
+				</time>
+				<p class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-yellow-100">
+					BA in Political Science
+				</p>
+				<p class="mt-1 text-base leading-7 text-gray-600 dark:text-white">
+					Political Science, Philosophy &amp; Psychology Minor<br />University of Kentucky
+				</p>
+			</div>
+			<div>
+				<time datetime="2021-12" class="flex items-center text-sm font-semibold leading-6 text-sky-600">
+					<svg viewBox="0 0 4 4" class="mr-4 h-1 w-1 flex-none" aria-hidden="true">
+						<circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+					</svg>
+					2008
+					<div
+						class="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 dark:bg-gray-100/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+						aria-hidden="true"
+					>
+					</div>
+				</time>
+				<p class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-yellow-100">
+					MA in Political Science
+				</p>
+				<p class="mt-1 text-base leading-7 text-gray-600 dark:text-white">
+					Political Science, Political Psychology &amp; Research Methodology<br />University of Kentucky
+				</p>
+			</div>
+			<div>
+				<time datetime="2018" class="flex items-center text-sm font-semibold leading-6 text-sky-600">
+					<svg viewBox="0 0 4 4" class="mr-4 h-1 w-1 flex-none" aria-hidden="true">
+						<circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+					</svg>
+					2018
+					<div
+						class="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 dark:bg-gray-100/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+						aria-hidden="true"
+					>
+					</div>
+				</time>
+				<p class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-yellow-100">
+					Moms Demand Action
+				</p>
+				<p class="mt-1 text-base leading-7 text-gray-600 dark:text-white">
+					Northern Kentucky Chapter Leader<br />Moms Demand Action for Gun Sense in America
+				</p>
+			</div>
+			<div>
+				<time datetime="2020" class="flex items-center text-sm font-semibold leading-6 text-sky-600">
+					<svg viewBox="0 0 4 4" class="mr-4 h-1 w-1 flex-none" aria-hidden="true">
+						<circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+					</svg>
+					2020
+					<div
+						class="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 dark:bg-gray-100/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+						aria-hidden="true"
+					>
+					</div>
+				</time>
+				<p class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-yellow-100">
+					Campbell Co. Democrats
+				</p>
+				<p class="mt-1 text-base leading-7 text-gray-600 dark:text-white">
+					Served one-term as Chair of the Campbell County Democratic Party from 2020
+				</p>
+			</div>
+		</div>
+	</Section>
+
 	<Logos />
 </Layout>

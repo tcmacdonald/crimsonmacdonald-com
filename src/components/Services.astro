@@ -1,51 +1,53 @@
 ---
-
+import Section from '../components/Section.astro';
 ---
 
-<section id="services" class="dark:text-gray-300">
-	<div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
-		<div
-			class="flex gap-x-4 rounded-xl bg-gray-200 ring-gray-300 dark:bg-white/5 dark:ring-white/10 p-6 ring-1 ring-inset hover:scale-105 hover:bg-gray-100 transition-all"
-		>
-			<i class="text-2xl fa-solid fa-envelope text-gray-400 dark:text-white"></i>
-			<div class="text-base leading-7">
-				<h3 class="font-semibold text-xl text-sky-700 dark:text-yellow-100">Data Services</h3>
-				<ul class="mt-2">
-					<li>Predictive modeling</li>
-					<li>Strategic analysis</li>
-					<li>Survey &amp; questionnaire creation</li>
-					<li>Data visualization</li>
-					<li>Qualitative Research, Focus Groups</li>
-				</ul>
+<div class="border-t border-gray-300 dark:border-white/10">
+	<Section title="Services">
+		<div class="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8">
+			<div
+				class="flex gap-x-4 rounded-xl bg-gray-200 ring-gray-300 dark:bg-white/5 dark:ring-white/10 p-6 ring-1 ring-inset hover:scale-105 hover:bg-gray-100 transition-all"
+			>
+				<i class="text-2xl fa-solid fa-database text-gray-400 dark:text-white"></i>
+				<div class="text-base leading-7 dark:text-white">
+					<h3 class="font-semibold text-xl text-sky-700 dark:text-yellow-100">Data Services</h3>
+					<ul class="my-4">
+						<li>Predictive modeling</li>
+						<li>Strategic analysis</li>
+						<li>Survey &amp; questionnaire creation</li>
+						<li>Data visualization</li>
+						<li>Qualitative Research, Focus Groups</li>
+					</ul>
+				</div>
+			</div>
+			<div
+				class="flex gap-x-4 rounded-xl bg-gray-200 ring-gray-300 dark:bg-white/5 p-6 ring-1 ring-inset dark:ring-white/10 hover:scale-105 hover:bg-gray-100 transition-all"
+			>
+				<i class="text-2xl fa-solid fa-wand-magic-sparkles text-gray-400 dark:text-white"></i>
+				<div class="text-base leading-7 dark:text-white">
+					<h3 class="font-semibold text-xl text-sky-700 dark:text-yellow-100">Digital Marketing</h3>
+					<ul class="my-4">
+						<li>Strategic messaging</li>
+						<li>Relationship Management</li>
+						<li>Email management</li>
+						<li>Social media</li>
+					</ul>
+				</div>
+			</div>
+			<div
+				class="flex gap-x-4 rounded-xl bg-gray-200 ring-gray-300 dark:bg-white/5 p-6 ring-1 ring-inset dark:ring-white/10 hover:scale-105 hover:bg-gray-100 transition-all"
+			>
+				<i class="text-2xl fa-solid fa-microphone text-gray-400 dark:text-white"></i>
+				<div class="text-base leading-7 dark:text-white">
+					<h3 class="font-semibold text-xl text-sky-700 dark:text-yellow-100">Media Inquiries</h3>
+					<ul class="my-4">
+						<li>Digital ad buys & analytics</li>
+						<li>Communication Strategy</li>
+						<li>Press Releases</li>
+						<li>Speech writing</li>
+					</ul>
+				</div>
 			</div>
 		</div>
-		<div
-			class="flex gap-x-4 rounded-xl bg-gray-200 ring-gray-300 dark:bg-white/5 p-6 ring-1 ring-inset dark:ring-white/10 hover:scale-105 hover:bg-gray-100 transition-all"
-		>
-			<i class="text-2xl fa-solid fa-envelope text-gray-400 dark:text-white"></i>
-			<div class="text-base leading-7">
-				<h3 class="font-semibold text-xl text-sky-700 dark:text-yellow-100">Digital Marketing</h3>
-				<ul class="mt-2">
-					<li>Strategic messaging</li>
-					<li>Relationship Management</li>
-					<li>Email management</li>
-					<li>Social media</li>
-				</ul>
-			</div>
-		</div>
-		<div
-			class="flex gap-x-4 rounded-xl bg-gray-200 ring-gray-300 dark:bg-white/5 p-6 ring-1 ring-inset dark:ring-white/10 hover:scale-105 hover:bg-gray-100 transition-all"
-		>
-			<i class="text-2xl fa-solid fa-envelope text-gray-400 dark:text-white"></i>
-			<div class="text-base leading-7">
-				<h3 class="font-semibold text-xl text-sky-700 dark:text-yellow-100">Media Inquiries</h3>
-				<ul class="mt-2">
-					<li>Digital ad buys & analytics</li>
-					<li>Communication Strategy</li>
-					<li>Press Releases</li>
-					<li>Speech writing</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</section>
+	</Section>
+</div>

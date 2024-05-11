@@ -3,13 +3,18 @@ import Form from './Form.astro';
 ---
 
 <footer>
-	<div class="bg-gray-100 dark:bg-gray-900 py-16 sm:py-24 lg:py-32">
-		<div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
+	<div class="bg-gray-100 dark:bg-gray-900 py-16 sm:py-24">
+		<div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8 px-6 lg:px-8">
 			<div class="max-w-xl text-3xl font-bold tracking-tight dark:text-white sm:text-4xl lg:col-span-7">
 				<h2 class="inline sm:block lg:inline xl:block">Need help with your campaign?</h2>
 				<p class="inline sm:block lg:inline xl:block text-sky-700 dark:text-yellow-200">Let's talk.</p>
 			</div>
 			<Form />
+		</div>
+		<div class="mx-auto grid max-w-7xl border-t border-gray-300 dark:border-white/10 mt-16 pt-8 px-6 lg:px-8">
+			<p class="text-xs text-center leading-5 text-gray-400">
+				&copy; 2024 Crimson MacDonald, LLC. All rights reserved.
+			</p>
 		</div>
 	</div>
 </footer>
